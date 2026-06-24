@@ -4,9 +4,9 @@ import google.generativeai as genai
 
 # --- YAPILANDIRMA ---
 
-API_KEY = "AQ.Ab8RN6LFVJ0loCfAbZ-SdSrpJ7FocdYtHseVETWqyNVnwAj4Rg"
-genai.configure(api_key=API_KEY)
-model = genai.GenerativeModel('gemini-pro')
+API_KEY = st.secrets["GEMINI_API_KEY"]
+    genai.configure(api_key=API_KEY)
+    model = genai.GenerativeModel('gemini-pro')
 
 st.set_page_config(page_title="Alüminyum Kesim & AI Asistanı", layout="wide")
 
