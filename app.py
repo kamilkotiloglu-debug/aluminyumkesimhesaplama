@@ -10,7 +10,7 @@ st.set_page_config(page_title="Alüminyum Kesim & AI", layout="wide")
 try:
     if "GEMINI_API_KEY" in st.secrets:
         genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
-        model = genai.GenerativeModel('gemini-pro')
+        model = genai.GenerativeModel('gemini-1.5-flash')
         ai_aktif = True
     else:
         ai_aktif = False
